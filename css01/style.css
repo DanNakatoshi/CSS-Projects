@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap');
+
+* {
+  /* borderとpaddingを枠内に収めるのでデザインが楽 */
+  box-sizing:border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  /* すべてのエレメントをセンターに配置 */
+  
+  display: flex;
+  /* 縦に配置 */
+  
+  flex-direction: column;
+  /* アイテムをセンター化 */
+  align-items:center;
+
+  /* コンテンツを縦の真ん中に配置※縦の高さを設定する必要あり */
+  justify-content: center;
+  
+  /* vhはview port heightの略。これで画面の100％を高さとする。 */
+  height: 100vh;
+
+  /* スクロールバーを表示させないように */
+  overflow: hidden;
+  
+  /* デフォルトであるマージンを除く */
+  margin: 0;
+
+
+}
