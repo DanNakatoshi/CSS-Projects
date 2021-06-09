@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap');
+
+* {
+  /* borderとpaddingを枠内に収めるのでデザインが楽 */
+  box-sizing:border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  /* すべてのエレメントをセンターに配置 */
+  display: flex;
+  /* 縦に配置 */
+  flex-direction: column;
+  /* アイテムをセンター化 */
+  align-items:center;
+  /* コンテンツを縦の真ん中に配置※縦の高さを設定する必要あり */
+  justify-content: center;
+  /* vhはview port heightの略。これで画面の100％を高さとする。 */
+  height: 100vh;
+  /* スクロールバーを表示させないように */
+  overflow: hidden;
+  /* デフォルトであるマージンを除く */
+  margin: 0;
+}
+
+.container {
+  display: flex;
+
+  /* viewport widthの略 */
+  width: 90vw;
+}
+
+.panel {
+  /* テキストをカバーする */
+  background-size: cover;
+  position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+
+  /* 角を丸くする */
+  border-radius: 50px;
+
+  /* カーソルをホバーしたときのアイコンを変える */
+  cursor: pointer;
+
+  /* 幅を統一する。後でJSでこれをactiveクラスにしたときにflex:5等にする。 */
+  flex: 0.5;
+
+  /* カードの余白を付ける */
+  margin: 10px;
+
+  /* 中のテキストをポジションを合わせるため。
+  テキストはabusoluteで下の方に移動する。 */
+  position:relative;
+
+  /* アニメーションの追加  */
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  color: #fff;
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+
+  /* テキストを透明にする。パネルがアクティブの時のみに表示するようにする*/
+  opacity: 0;
+}
+
+/* class="panel active" */
+.panel.active {
+  flex: 5;
+}
+
+/* class="panel active" ないのh3タグ*/
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
