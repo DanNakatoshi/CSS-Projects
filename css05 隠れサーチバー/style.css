@@ -8,17 +8,11 @@
 body {
   background-image: linear-gradient(90deg, #7d5fff, #7258e2);
   font-family: 'Noto Sans JP', sans-serif;
-  /* すべてのエレメントをセンターに配置 */
   display: flex;
-  /* 縦に配置 */
   align-items:center;
-  /* コンテンツを縦の真ん中に配置※縦の高さを設定する必要あり */
   justify-content: center;
-  /* vhはview port heightの略。これで画面の100％を高さとする。 */
   height: 100vh;
-  /* スクロールバーを表示させないように */
   overflow: hidden;
-  /* デフォルトであるマージンを除く */
   margin: 0;
 }
 
