@@ -3,7 +3,7 @@ const sounds = ['お早う', '宜しく', '覚悟', '甘い'];
 sounds.forEach(sound => {
   const btn = document.createElement('button');
   btn.classList.add('btn');
-
+　
   btn.innerText = sound;
 
   btn.addEventListener('click', () => {

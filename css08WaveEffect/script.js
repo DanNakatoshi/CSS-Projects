@@ -6,3 +6,5 @@ labels.forEach(label => {
     .map((letter, idx) => `<span style="transition-delay:${idx * 50}ms">${letter}</span>`)
     .join('');
 })
+
+// joinでArrayを結合する

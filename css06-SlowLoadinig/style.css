@@ -18,8 +18,9 @@ body {
 .bg {
   background: url("https://source.unsplash.com/2wvUlyDLJt8") no-repeat center center/cover;
   position: absolute;
-  top: -30;
-  left: -30;
+  /* top: -30; */
+  /* left: -30; */
+  /* ぼかしを隠すために60pxオフセット */
   width: calc(100vw + 60px);
   height: calc(100vh + 60px);
   z-index: -1;

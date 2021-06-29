@@ -6,11 +6,10 @@
 }
 
 body {
-  background-color: rgb(161, 100, 223);
+  background-color: #8e44ad;
+  color: #fff;
   font-family: 'Noto Sans JP', sans-serif;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   align-items:center;
   justify-content: center;
   height: 100vh;
@@ -18,21 +17,22 @@ body {
   margin: 0;
 }
 
-.btn {
-  background-color: rebeccapurple;
-  border-radius: 5px;
-  border: none;
-  color: #fff;
-  font-size:1.2rem;
-  font-family: inherit;
-  cursor: pointer;
-  margin: 0 10px;
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 30px 50px;
 }
 
-.btn:hover {
-  opacity: 0.9;
+.counter {
+  font-size: 60px;
+  margin-top: 10px;
 }
 
-.btn:focus {
-  outline: none;
+/* 横幅が580px以下の場合にどうするか指定 */
+@media(max-width:580px) {
+  body {
+  flex-direction: column;
+  }
 }
