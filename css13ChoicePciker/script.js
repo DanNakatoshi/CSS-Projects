@@ -8,11 +8,11 @@ textarea.addEventListener('keyup', (e) => {
 
 if(e.key === 'Enter') {
   setTimeout(() => {
-    e.target,value = '';
+    e.target.value = '';
   }, 10)
   randomSelect();
 }
-
+ 
 })
 
 function createTags(input) {
